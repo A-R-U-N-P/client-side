@@ -1,0 +1,28 @@
+<app-topbar></app-topbar>
+<div class="card" *ngIf="userData">
+    <div class="card-body">
+        <h5 class="card-title">User Information</h5>
+        <dl class="row">
+            <dt class="col-sm-3">First Name:</dt>
+            <dd class="col-sm-9">{{ userData?.firstName }}</dd>
+
+            <dt class="col-sm-3">Last Name:</dt>
+            <dd class="col-sm-9">{{ userData.lastName }}</dd>
+
+            <dt class="col-sm-3">Email:</dt>
+            <dd class="col-sm-9">{{ userData.email }}</dd>
+
+            <dt class="col-sm-3">Contact Number:</dt>
+            <dd class="col-sm-9">{{ userData.contactNo }}</dd>
+
+            <dt class="col-sm-3">Address:</dt>
+            <dd class="col-sm-9">{{ userData.address }}</dd>
+
+            <dt class="col-sm-3">Role:</dt>
+            <dd class="col-sm-9">{{ userData.role }}</dd>
+
+            <dt class="col-sm-3">Created At:</dt>
+            <dd class="col-sm-9">{{ userData.createdAt | date: 'medium' }}</dd>
+        </dl>
+    </div>
+</div>

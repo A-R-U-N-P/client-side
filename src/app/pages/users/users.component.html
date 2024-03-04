@@ -1,0 +1,28 @@
+<app-topbar></app-topbar>
+<div>
+    <span style="display: flex;align-items: center;">
+        <h3> {{orgName}} </h3>&nbsp; Organization Users
+    </span>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <ng-container *ngFor="let item of headers">
+                    <th>{{item |titlecase}}</th>
+                </ng-container>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of orgUsers">
+                <td><a [href]="'/pages/user-info/'+data._id">{{ data.firstName }}</a></td>
+                <td>{{ data.lastName }}</td>
+                <td>{{ data.email }}</td>
+                <td>{{ data.address }}</td>
+                <td>{{ data.contactNo }}</td>
+                <td>{{ data.createdAt |date}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
